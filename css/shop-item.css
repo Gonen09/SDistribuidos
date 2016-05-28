@@ -17,3 +17,10 @@ body {
 footer {
     margin: 50px;
 }
+
+#logo-uls,#logo-comp{
+  height: auto;
+  width: auto;
+  max-width: 150px;
+  max-height: 150px;
+}
