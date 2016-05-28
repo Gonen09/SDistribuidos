@@ -1,0 +1,2 @@
+bd_name: sdproductos
+table_name: productos
