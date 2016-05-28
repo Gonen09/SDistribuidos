@@ -56,8 +56,8 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-pills nav-justified" role ="tablist" id="nav-principal">
                         <li><a href="index.html">Inicio</a></li>
-                        <li><a href="#">Contacto</a></li>
-                        <li><a href="#">Sobre nosotros</a></li>
+                        <li data-toggle="modal" onclick="$('#myModal1').modal()"><a href="#">Contacto</a></li>
+                        <li data-toggle="modal" onclick="$('#myModal2').modal()"><a href="#">Sobre nosotros</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role ="button">Sucursales  <b class="caret"></b></a>
                             <ul class="dropdown-menu" id="sub-menu">
@@ -74,11 +74,51 @@
             <!-- /.container -->
         </nav>
 
+        <!-- modal nav -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Contacto</h4>
+              </div>
+              <div class="modal-body">
+                <img src="image/uls-logo.jpg" class="img-responsive" id ="logo-uls"><br>
+                <p>Universidad de la Serena<br> Departamento de Matematicas<br>
+                   Avenida Cisternas Nº 1200<br> La Serena <br> Teléfono: 51 2 204102 / 51 2 204103</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Sobre nosotros</h4>
+              </div>
+              <div class="modal-body">
+                <img src="image/comp-logo.jpg" class="img-responsive" id ="logo-comp"><br>
+                <p>Curso de sistemas dristibuidos<br> Ingenieria en Computación<br> Universidad de la Serena</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Page Content -->
         <div class="container col-md-12" >
             <div class="row">
                 <div class="col-md-2">
-                    <img src="image/logo.png" class="img-responsive" id ="logo">
+                    <img src="image/page-logo.png" class="img-responsive" id ="logo">
                     <ul id="categorias" class="nav nav-pills nav-stacked">
                         <li class="active" onclick="listaProductos('computacion')"><a data-toggle="pill" href="#">Computación</a></li>
                         <li onclick="listaProductos('electronica')"><a data-toggle="pill" href="#">Electrónica</a></li>
@@ -125,8 +165,8 @@
         <script src="js/bootstrap.js"></script>
         <script>
             $(document).ready(function () {
-                $('#list').click(function(event){event.preventDefault();$('#products .item').addClass('list-group-item');});
-                $('#grid').click(function(event){event.preventDefault();$('#products .item').removeClass('list-group-item');$('#products .item').addClass('grid-group-item');});
+                $('#list').click(function(event){event.preventDefault();$('#productos .item').addClass('list-group-item');});
+                $('#grid').click(function(event){event.preventDefault();$('#productos .item').removeClass('list-group-item');$('#products .item').addClass('grid-group-item');});
                 $('.dropdown-toggle').dropdown();
             });
         </script>
