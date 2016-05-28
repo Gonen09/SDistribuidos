@@ -2,6 +2,10 @@ in.glyphicon {
    margin-right:5px;
  }
 
+#vista-previa{
+  height: 200px;
+}
+
 .thumbnail
 {
     margin-bottom: 20px;
