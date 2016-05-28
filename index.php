@@ -165,8 +165,8 @@
         <script src="js/bootstrap.js"></script>
         <script>
             $(document).ready(function () {
-                $('#list').click(function(event){event.preventDefault();$('#products .item').addClass('list-group-item');});
-                $('#grid').click(function(event){event.preventDefault();$('#products .item').removeClass('list-group-item');$('#products .item').addClass('grid-group-item');});
+                $('#list').click(function(event){event.preventDefault();$('#productos .item').addClass('list-group-item');});
+                $('#grid').click(function(event){event.preventDefault();$('#productos .item').removeClass('list-group-item');$('#products .item').addClass('grid-group-item');});
                 $('.dropdown-toggle').dropdown();
             });
         </script>
