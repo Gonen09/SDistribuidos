@@ -39,7 +39,7 @@
         </script>
     </head>
 
-    <body>
+    <body onload="listaProductos('computacion')">
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
@@ -55,7 +55,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-pills nav-justified" role ="tablist" id="nav-principal">
-                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.php">Inicio</a></li>
                         <li data-toggle="modal" onclick="$('#myModal1').modal()"><a href="#">Contacto</a></li>
                         <li data-toggle="modal" onclick="$('#myModal2').modal()"><a href="#">Sobre nosotros</a></li>
                         <li class="dropdown">
