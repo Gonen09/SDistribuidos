@@ -20,22 +20,49 @@
 
         <script>
 
+          function isEmpty(str) {
+            return (!str || 0 === str.length);
+          }
+
           function listaProductos(categoria){
 
-            //alert("Llamando desde:"+categoria);
+              //alert("Llamando desde:"+categoria);
 
-            document.getElementById("productos").innerHTML="";
+              document.getElementById("productos").innerHTML="";
 
-            var xhttp = new XMLHttpRequest();
+              var xhttp = new XMLHttpRequest();
 
-            xhttp.onreadystatechange = function() {
-              if (xhttp.readyState == 4 && xhttp.status == 200) {
-               document.getElementById("productos").innerHTML = xhttp.responseText;
-              }
-            };
-            xhttp.open("GET","scripts/insertarproductos.php?cat="+categoria,true);
-            xhttp.send();
+              xhttp.onreadystatechange = function() {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                 document.getElementById("productos").innerHTML = xhttp.responseText;
+                }
+              };
+              xhttp.open("GET","scripts/cargarCategoria.php?cat="+categoria,true);
+              xhttp.send();
           }
+
+          function buscarProducto(){
+
+              var busqueda = document.getElementById("busqueda").value
+
+              if (isEmpty(busqueda)){
+                alert("Ingrese parametros para la busqueda");
+              }else{
+                //alert("Buscar: "+busqueda);
+                document.getElementById("productos").innerHTML="";
+
+                var xhttp = new XMLHttpRequest();
+
+                xhttp.onreadystatechange = function() {
+                  if (xhttp.readyState == 4 && xhttp.status == 200) {
+                   document.getElementById("productos").innerHTML = xhttp.responseText;
+                  }
+                };
+                xhttp.open("GET","scripts/cargarProducto.php?pro="+busqueda,true);
+                xhttp.send();
+              }
+          }
+
         </script>
     </head>
 
@@ -120,6 +147,15 @@
                 <div class="col-md-2">
                     <img src="image/page-logo.png" class="img-responsive" id ="logo">
                     <ul id="categorias" class="nav nav-pills nav-stacked">
+                        <li role="separator" class="divider"></li>
+                        <div class="input-group">
+                            <input type="text" id="busqueda" class="form-control" placeholder="Buscar" name="q">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="button"
+                                onclick="buscarProducto()"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                        </div>
+                        <li role="separator" class="divider"></li>
                         <li class="active" onclick="listaProductos('computacion')"><a data-toggle="pill" href="#">Computación</a></li>
                         <li onclick="listaProductos('electronica')"><a data-toggle="pill" href="#">Electrónica</a></li>
                         <li onclick="listaProductos('telefonia')"><a data-toggle="pill" href="#">Telefonía</a></li>
