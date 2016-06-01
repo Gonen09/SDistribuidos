@@ -12,7 +12,7 @@
     $query = "SELECT * FROM productos WHERE nombre LIKE '%".$producto."%'";
     $stmt = $conn->prepare($query);
     $stmt->execute();
-    
+
     //bindParam
     /*
     $term = "'%".$producto."%'";
@@ -21,7 +21,7 @@
     $stmt->bindParam(':nombre', $term);
     $stmt->execute();
     */
-
+    
     while($row = $stmt->fetch()){
         cargarProductos($row['id'],$row['nombre'],$row['precio'],$row['descripcion'],$row['imagen']);
     }
