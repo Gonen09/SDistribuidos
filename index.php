@@ -105,37 +105,37 @@
 
         <!-- Modal -->
         <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
+          <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
-              <div class="modal-header">
+              <div class="modal-header text-center">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Contacto</h4>
               </div>
-              <div class="modal-body">
-                <img src="image/uls-logo.jpg" class="img-responsive" id ="logo-uls"><br>
+              <div class="modal-body text-center">
+                <img src="image/uls-logo.jpg" class="img-responsive center-block" id ="logo-uls"><br>
                 <p>Universidad de la Serena<br> Departamento de Matematicas<br>
                    Avenida Cisternas Nº 1200<br> La Serena <br> Teléfono: 51 2 204102 / 51 2 204103</p>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary center-block" data-dismiss="modal">Cerrar</button>
               </div>
             </div>
           </div>
         </div>
 
         <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
+          <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
-              <div class="modal-header">
+              <div class="modal-header text-center">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Sobre nosotros</h4>
               </div>
-              <div class="modal-body">
-                <img src="image/comp-logo.jpg" class="img-responsive" id ="logo-comp"><br>
+              <div class="modal-body text-center">
+                <img src="image/comp-logo.jpg" class="img-responsive center-block" id ="logo-comp"><br>
                 <p>Curso de sistemas dristibuidos<br> Ingenieria en Computación<br> Universidad de la Serena</p>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary center-block" data-dismiss="modal">Cerrar</button>
               </div>
             </div>
           </div>
