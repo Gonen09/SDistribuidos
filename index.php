@@ -17,53 +17,6 @@
 
         <!-- Bootstrap Core CSS -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
-
-        <script>
-
-          function isEmpty(str) {
-            return (!str || 0 === str.length);
-          }
-
-          function listaProductos(categoria){
-
-              //alert("Llamando desde:"+categoria);
-
-              document.getElementById("productos").innerHTML="";
-
-              var xhttp = new XMLHttpRequest();
-
-              xhttp.onreadystatechange = function() {
-                if (xhttp.readyState == 4 && xhttp.status == 200) {
-                 document.getElementById("productos").innerHTML = xhttp.responseText;
-                }
-              };
-              xhttp.open("GET","scripts/cargarCategoria.php?cat="+categoria,true);
-              xhttp.send();
-          }
-
-          function buscarProducto(){
-
-              var busqueda = document.getElementById("busqueda").value
-
-              if (isEmpty(busqueda)){
-                alert("Ingrese parametros para la busqueda");
-              }else{
-                //alert("Buscar: "+busqueda);
-                document.getElementById("productos").innerHTML="";
-
-                var xhttp = new XMLHttpRequest();
-
-                xhttp.onreadystatechange = function() {
-                  if (xhttp.readyState == 4 && xhttp.status == 200) {
-                   document.getElementById("productos").innerHTML = xhttp.responseText;
-                  }
-                };
-                xhttp.open("GET","scripts/cargarProducto.php?pro="+busqueda,true);
-                xhttp.send();
-              }
-          }
-
-        </script>
     </head>
 
     <body onload="listaProductos('computacion')">
@@ -76,7 +29,6 @@
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
                     </button>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -85,15 +37,6 @@
                         <li><a href="index.php">Inicio</a></li>
                         <li data-toggle="modal" onclick="$('#myModal1').modal()"><a href="#">Contacto</a></li>
                         <li data-toggle="modal" onclick="$('#myModal2').modal()"><a href="#">Sobre nosotros</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role ="button">Sucursales  <b class="caret"></b></a>
-                            <ul class="dropdown-menu" id="sub-menu">
-                                <li>
-                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">La Serena</a>
-                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Coquimbo</a>
-                                </li>
-                            </ul>
-                        </li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -133,6 +76,25 @@
               <div class="modal-body text-center">
                 <img src="image/comp-logo.jpg" class="img-responsive center-block" id ="logo-comp"><br>
                 <p>Curso de sistemas dristibuidos<br> Ingenieria en Computación<br> Universidad de la Serena</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary center-block" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal producto -->
+
+        <div class="modal fade" id="myModal3" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" id="vista-maximizada-titulo"></h4>
+              </div>
+              <div class="modal-body">
+                <img class="img-responsive center-block" id="vista-maximizada-imagen" src=""/>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary center-block" data-dismiss="modal">Cerrar</button>
@@ -193,6 +155,7 @@
         <!-- jOther -->
         <script src="js/prefixfree.min.js"></script>
         <script src="js/index.js"></script>
+        <script src="js/productos.js"></script>
         <!-- jQuery -->
         <script src="js/jquery.js"></script>
         <script src='js/jquery.min.js'></script>

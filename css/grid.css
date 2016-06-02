@@ -3,16 +3,7 @@ in.glyphicon {
  }
 
 #vista-previa{
-  height: 200px;
-}
-
-.thumbnail
-{
-    margin-bottom: 20px;
-    padding: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px;
+  height: 160px;
 }
 
 .item.list-group-item
