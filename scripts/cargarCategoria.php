@@ -7,7 +7,6 @@
   //echo "<h3>La categoria es: ".$categoria."<h3>";
 
   //LOCAL
-/*
   function cargarCategoria($categoria,$conn){
 
     $stmt = $conn->prepare("SELECT * FROM productos WHERE categoria=:cat");
@@ -18,11 +17,10 @@
         cargarProductos($row['id'],$row['nombre'],$row['precio'],$row['descripcion'],$row['imagen']);
     }
   }
-*/
-  //SERVIDOR
-
   
-
+  //SERVIDOR
+  /*
+  
   function cargarCategoria($categoria,$cid){
 
     if($categoria == 'computacion'){
@@ -50,8 +48,6 @@ function rellenarTablero($categoria,$cid)
   $codigo = "######";
   $precio = 999999;
   $nombre = "fake name";
-  
-  
   
   $i=0;
   while(odbc_fetch_row($stmt) and $i < 25)
@@ -88,9 +84,9 @@ function rellenarTablero($categoria,$cid)
 	 $i=$i+1;
   }
 }
-
+*/
 if(isset($categoria)){
-  cargarCategoria($categoria,$cid); //SERVIDOR
-  //cargarCategoria($categoria,$conn); //LOCAL
+  //cargarCategoria($categoria,$cid); //SERVIDOR
+  cargarCategoria($categoria,$conn); //LOCAL
 }
 ?>
