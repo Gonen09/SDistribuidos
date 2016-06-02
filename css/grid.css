@@ -1,3 +1,10 @@
+
+.elemento{
+min-width: 300px;
+max-width: 1500px;
+/*background-color: red; Para verificar el tamaño*/
+}
+
 in.glyphicon {
    margin-right:5px;
  }
@@ -52,4 +59,6 @@ in.glyphicon {
 .list-group-item-text
 {
     margin: 0 0 11px;
+    word-wrap: break-word;
+    word-break: break-word;
 }

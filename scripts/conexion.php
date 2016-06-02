@@ -1,7 +1,7 @@
  <?php
 
 //CONEXION BD LOCAL
-/*
+
 $servername = "localhost";
 $dbname = "sdproductos";
 $username = "root";
@@ -14,9 +14,9 @@ try {
 }catch(PDOException $e){
     echo "Conexion fallida: " . $e->getMessage();
 }
-*/
-//CONEXION BD SERVIDOR
 
+//CONEXION BD SERVIDOR
+/*
 $dsn = "bonito";
 $servername = "10.3.132.38";
 $dbname = 'bonito';
@@ -30,5 +30,5 @@ if (!$cid){
 }else{
   echo("<strong>Conectado con el origen de datos.</strong>");
 }
-
+*/
 ?>
