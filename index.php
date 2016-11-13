@@ -157,17 +157,9 @@
         <script src="js/index.js"></script>
         <script src="js/productos.js"></script>
         <!-- jQuery -->
-        <script src="js/jquery.js"></script>
         <script src='js/jquery.min.js'></script>
         <!-- Bootstrap Core JavaScript -->
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <script>
-            $(document).ready(function () {
-                $('#list').click(function(event){event.preventDefault();$('#productos .item').addClass('list-group-item');});
-                $('#grid').click(function(event){event.preventDefault();$('#productos .item').removeClass('list-group-item');$('#products .item').addClass('grid-group-item');});
-                $('.dropdown-toggle').dropdown();
-            });
-        </script>
+        <script src="js/modal.js"></script>
     </body>
 </html>
